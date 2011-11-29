@@ -1,0 +1,49 @@
+body {
+  background-color: #39414A;
+}
+
+button {
+  border: solid 1px #000;
+  background-color: #1F2828;
+  color: #3991CA;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.popup {
+  border: solid 1px #000;
+  background-color: #C4C4C4;
+  padding: 5px;
+}
+
+.popup-active {
+  background-color: #FFF;
+}
+
+.popup .title h1 {
+  font-family: Sans-serif;
+  font-size: 22px;
+  margin: 5px 10px;
+  text-transform: uppercase;
+}
+
+.popup .title h3 {
+  font-family: Sans-serif;
+  font-size: 12px;
+  margin: 5px 10px;
+}
+
+.popup .content {
+  margin: 20px 10px;
+}
+
+.popup-close {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 42px;
+    height: 42px;
+    background: url("../img/close_button.png");
+}

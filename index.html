@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <title>Popup demo</title>
+  
+  <link rel="stylesheet" href="css/main.css" />
+  
+  <!-- libs -->
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/lib/underscore.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.js"></script>
+  
+  <!-- app -->
+  <script type="text/javascript" src="js/app/app.js"></script>
+  <script type="text/javascript" src="js/app/views/PopupView.js"></script>
+  <script type="text/javascript" src="js/app/views/ChildPopupView.js"></script>
+  
+  <!-- templates -->
+  <script id="popup-template" type="text/template">
+    <div class="title">
+      <h1><%= title %></h1>
+    </div>
+    <div class="content">
+      <%= content %>
+    </div>
+    <div class="popup-close">
+    </div>
+  </script>
+  
+  <script id="child-popup-template" type="text/template">
+    <div class="title">
+      <h1><%= title %></h1>
+      <h3>i am a child</h3>
+    </div>
+    <div class="content">
+      <%= content %>
+    </div>
+    <div class="popup-close">
+    </div>
+  </script>
+  
+</head>
+<body>
+  <button id="popup-button">popup</button>
+  <button id="child-popup-button">child popup</button>
+</body>
+</html>
