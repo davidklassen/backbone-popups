@@ -31,16 +31,16 @@ var PopupView = Backbone.View.extend({
   },
   
   /**
-   * Рендерит попап и располагает его поверх остальных.
+   * Р РµРЅРґРµСЂРёС‚ РїРѕРїР°Рї Рё СЂР°СЃРїРѕР»Р°РіР°РµС‚ РµРіРѕ РїРѕРІРµСЂС… РѕСЃС‚Р°Р»СЊРЅС‹С….
    */
   render: function () {
     $(this.el).html(_.template(this.template, this.context));
     
-    // Делаем декущий попап активным
+    // Р”РµР»Р°РµРј РґРµРєСѓС‰РёР№ РїРѕРїР°Рї Р°РєС‚РёРІРЅС‹Рј
     $('.popup-active').removeClass('popup-active');
     $(this.el).addClass('popup-active');
     
-    // Начальный z-index, минимальное значение которое может получить попап
+    // РќР°С‡Р°Р»СЊРЅС‹Р№ z-index, РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РєРѕС‚РѕСЂРѕРµ РјРѕР¶РµС‚ РїРѕР»СѓС‡РёС‚СЊ РїРѕРїР°Рї
     var max_z = 100;
     
     $('.popup').each(function () {
@@ -56,8 +56,8 @@ var PopupView = Backbone.View.extend({
   },
   
   /**
-   * Поднимает попап наверх и делает его активным
-   * по нажатию кнопки мыши.
+   * РџРѕРґРЅРёРјР°РµС‚ РїРѕРїР°Рї РЅР°РІРµСЂС… Рё РґРµР»Р°РµС‚ РµРіРѕ Р°РєС‚РёРІРЅС‹Рј
+   * РїРѕ РЅР°Р¶Р°С‚РёСЋ РєРЅРѕРїРєРё РјС‹С€Рё.
    */
   raise: function (e) {
     if (!$(this.el).hasClass('popup-active')) {
@@ -78,7 +78,7 @@ var PopupView = Backbone.View.extend({
   },
   
   /**
-   * Удаляет попап из DOM.
+   * РЈРґР°Р»СЏРµС‚ РїРѕРїР°Рї РёР· DOM.
    */
   close: function () {
     $(this.el).remove();
@@ -87,7 +87,7 @@ var PopupView = Backbone.View.extend({
     var top = null;
     
     
-    // Выбираем самый верхний их оставшихся попапов
+    // Р’С‹Р±РёСЂР°РµРј СЃР°РјС‹Р№ РІРµСЂС…РЅРёР№ РёС… РѕСЃС‚Р°РІС€РёС…СЃСЏ РїРѕРїР°РїРѕРІ
     $('.popup').each(function () {
       var curr_z = parseInt($(this).css('z-index'));
       if (curr_z > max_z) {
@@ -96,7 +96,7 @@ var PopupView = Backbone.View.extend({
       }
     });
     
-    // Делаем его активным
+    // Р”РµР»Р°РµРј РµРіРѕ Р°РєС‚РёРІРЅС‹Рј
     if (top) {
       $(top).addClass('popup-active');
     }
